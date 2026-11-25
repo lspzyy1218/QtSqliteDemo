@@ -2,10 +2,9 @@
 #define AppVersion "1.0.0"
 #define AppPublisher "Example"
 #define AppExeName "QtSqliteDemo.exe"
-#define AppId "{{8F3A2C10-5B7E-4D61-9A2F-1C6D4E8B0A33}"
 
 [Setup]
-AppId={#AppId}
+AppId={{8F3A2C10-5B7E-4D61-9A2F-1C6D4E8B0A33}
 AppName={#AppName}
 AppVersion={#AppVersion}
 AppVerName={#AppName} {#AppVersion}
