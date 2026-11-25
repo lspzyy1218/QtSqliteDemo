@@ -18,12 +18,43 @@ endif()
 
 qt_add_executable(QtSqliteDemo
     main.cpp
-    mainwindow.h
-    mainwindow.cpp
-    database.h
-    database.cpp
+    core/models.h
+    core/crypto.h
+    core/crypto.cpp
+    core/database.h
+    core/database.cpp
+    core/session.h
+    core/session.cpp
+    ui/ipage.h
+    ui/barchart.h
+    ui/barchart.cpp
+    ui/loginwidget.h
+    ui/loginwidget.cpp
+    ui/mainwindow.h
+    ui/mainwindow.cpp
+    ui/detectionpage.h
+    ui/detectionpage.cpp
+    ui/detectionrecordpage.h
+    ui/detectionrecordpage.cpp
+    ui/devicepage.h
+    ui/devicepage.cpp
+    ui/accountpage.h
+    ui/accountpage.cpp
+    ui/driverpage.h
+    ui/driverpage.cpp
+    ui/vehiclepage.h
+    ui/vehiclepage.cpp
+    ui/licensepage.h
+    ui/licensepage.cpp
+    ui/logpage.h
+    ui/logpage.cpp
+    ui/settingspage.h
+    ui/settingspage.cpp
+    ui/intervalpage.h
+    ui/intervalpage.cpp
 )
 
+target_include_directories(QtSqliteDemo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(QtSqliteDemo PRIVATE
     Qt6::Widgets
     Qt6::Sql
