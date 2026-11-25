@@ -24,6 +24,7 @@ UninstallDisplayIcon={app}\{#AppExeName}
 VersionInfoVersion={#AppVersion}
 
 [Languages]
+Name: "chinesesimplified"; MessagesFile: "languages\ChineseSimplified.isl"
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
