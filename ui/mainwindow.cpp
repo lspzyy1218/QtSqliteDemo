@@ -41,7 +41,10 @@ MainWindow::MainWindow(QWidget* parent)
 
 void MainWindow::setupUi()
 {
-    // 先添加所有页面（顺序与 MenuEntry 的 pageIndex 对应）
+    // 必须先创建页面容器，addPage() 依赖 m_stack
+    m_stack = new QStackedWidget;
+
+    // 添加所有页面（顺序与 MenuEntry 的 pageIndex 对应）
     addPage(new DetectionPage(this));          // 0 检测模式
     addPage(new DetectionRecordPage(this));    // 1 检测记录
     addPage(new DevicePage(this));             // 2 设备管理
@@ -67,9 +70,6 @@ void MainWindow::setupUi()
         "QListWidget::item{height:38px;padding-left:18px;}"
         "QListWidget::item:selected{background:#1a6fb5;color:white;}"));
     connect(m_menu, &QListWidget::currentRowChanged, this, &MainWindow::onMenuClicked);
-
-    // 右侧页面
-    m_stack = new QStackedWidget;
 
     root->addWidget(m_menu);
     root->addWidget(m_stack, 1);
