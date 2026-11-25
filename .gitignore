@@ -1,0 +1,11 @@
+build/
+build-*/
+artifacts/
+*.exe
+*.user
+*.user.*
+CMakeLists.txt.user
+.vs/
+.idea/
+*.db
+*.db-journal
