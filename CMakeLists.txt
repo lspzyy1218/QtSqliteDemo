@@ -18,6 +18,7 @@ endif()
 
 qt_add_executable(QtSqliteDemo
     main.cpp
+    resources/resources.qrc
     core/models.h
     core/crypto.h
     core/crypto.cpp

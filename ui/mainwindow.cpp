@@ -67,11 +67,8 @@ void MainWindow::setupUi()
 
     // 左侧菜单
     m_menu = new QListWidget;
-    m_menu->setFixedWidth(180);
-    m_menu->setStyleSheet(QStringLiteral(
-        "QListWidget{background:#f5f7fa;border:none;font-size:14px;}"
-        "QListWidget::item{height:38px;padding-left:18px;}"
-        "QListWidget::item:selected{background:#1a6fb5;color:white;}"));
+    m_menu->setObjectName(QStringLiteral("sideMenu"));
+    m_menu->setFixedWidth(190);
     connect(m_menu, &QListWidget::currentRowChanged, this, &MainWindow::onMenuClicked);
 
     root->addWidget(m_menu);
@@ -83,6 +80,7 @@ void MainWindow::setupUi()
     m_userLabel = new QLabel;
     m_licenseLabel = new QLabel;
     auto* logoutBtn = new QPushButton(QStringLiteral("退出登录"));
+    logoutBtn->setObjectName(QStringLiteral("secondaryBtn"));
     connect(logoutBtn, &QPushButton::clicked, this, &MainWindow::onLogout);
     toolbar->addWidget(m_userLabel);
     toolbar->addWidget(m_licenseLabel);

@@ -21,39 +21,67 @@ LoginWidget::LoginWidget(QWidget* parent)
 
 void LoginWidget::setupUi()
 {
-    auto* root = new QVBoxLayout(this);
-    root->setContentsMargins(40, 30, 40, 30);
+    setStyleSheet(QStringLiteral("#loginCard{background:#ffffff;border-radius:12px;}"));
+
+    auto* outer = new QVBoxLayout(this);
+    outer->setContentsMargins(48, 36, 48, 36);
+
+    auto* card = new QWidget;
+    card->setObjectName(QStringLiteral("loginCard"));
+    auto* root = new QVBoxLayout(card);
+    root->setContentsMargins(36, 32, 36, 32);
+    root->setSpacing(14);
+
+    auto* logo = new QLabel(QStringLiteral("◆"));
+    logo->setAlignment(Qt::AlignCenter);
+    logo->setStyleSheet(QStringLiteral("font-size:42px;color:#409eff;"));
 
     auto* title = new QLabel(QStringLiteral("智能车辆身份检测系统"));
-    title->setStyleSheet(QStringLiteral("font-size:20px;font-weight:bold;color:#1a6fb5;"));
     title->setAlignment(Qt::AlignCenter);
+    title->setStyleSheet(QStringLiteral("font-size:20px;font-weight:bold;color:#2c3e50;"));
+
+    auto* subtitle = new QLabel(QStringLiteral("车辆检测上位机 · 登录"));
+    subtitle->setAlignment(Qt::AlignCenter);
+    subtitle->setStyleSheet(QStringLiteral("color:#909399;font-size:12px;"));
 
     m_userEdit = new QLineEdit;
-    m_userEdit->setPlaceholderText(QStringLiteral("用户名"));
+    m_userEdit->setPlaceholderText(QStringLiteral("请输入用户名"));
+    m_userEdit->setFixedHeight(38);
     m_passEdit = new QLineEdit;
-    m_passEdit->setPlaceholderText(QStringLiteral("密码"));
+    m_passEdit->setPlaceholderText(QStringLiteral("请输入密码"));
     m_passEdit->setEchoMode(QLineEdit::Password);
+    m_passEdit->setFixedHeight(38);
 
     auto* form = new QFormLayout;
+    form->setLabelAlignment(Qt::AlignRight);
+    form->setHorizontalSpacing(12);
+    form->setVerticalSpacing(14);
     form->addRow(QStringLiteral("账号"), m_userEdit);
     form->addRow(QStringLiteral("密码"), m_passEdit);
 
-    auto* loginBtn = new QPushButton(QStringLiteral("登录"));
-    loginBtn->setStyleSheet(QStringLiteral("QPushButton{background:#1a6fb5;color:white;padding:8px;}"));
+    auto* loginBtn = new QPushButton(QStringLiteral("登 录"));
+    loginBtn->setFixedHeight(40);
+    loginBtn->setStyleSheet(QStringLiteral(
+        "QPushButton{background:#409eff;color:white;border-radius:6px;font-size:15px;font-weight:bold;}"
+        "QPushButton:hover{background:#66b1ff;}QPushButton:pressed{background:#337ecc;}"));
     connect(loginBtn, &QPushButton::clicked, this, &LoginWidget::onLogin);
     connect(m_passEdit, &QLineEdit::returnPressed, this, &LoginWidget::onLogin);
 
     m_hint = new QLabel(QStringLiteral("初始管理员：admin / Admin@2026!Strong"));
-    m_hint->setStyleSheet(QStringLiteral("color:#888;font-size:11px;"));
+    m_hint->setAlignment(Qt::AlignCenter);
+    m_hint->setStyleSheet(QStringLiteral("color:#a8abb2;font-size:11px;"));
     m_hint->setWordWrap(true);
 
+    root->addWidget(logo);
     root->addWidget(title);
-    root->addSpacing(20);
+    root->addWidget(subtitle);
+    root->addSpacing(10);
     root->addLayout(form);
-    root->addSpacing(10);
+    root->addSpacing(6);
     root->addWidget(loginBtn);
-    root->addSpacing(10);
     root->addWidget(m_hint);
+
+    outer->addWidget(card);
 }
 
 void LoginWidget::onLogin()

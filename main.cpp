@@ -56,7 +56,16 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
     QCoreApplication::setOrganizationName(QStringLiteral("Example"));
     QCoreApplication::setApplicationName(QStringLiteral("QtSqliteDemo"));
-    logLine(QStringLiteral("step 2: 应用信息设置完成"));
+
+    // 加载全局样式表
+    QFile styleFile(QStringLiteral(":/style.qss"));
+    if (styleFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        app.setStyleSheet(QString::fromUtf8(styleFile.readAll()));
+        styleFile.close();
+        logLine(QStringLiteral("step 2: 样式表已加载"));
+    } else {
+        logLine(QStringLiteral("警告: 样式表加载失败"));
+    }
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     logLine(QStringLiteral("step 3: 数据目录 = ") + dataDir);

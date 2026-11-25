@@ -66,9 +66,16 @@ void DetectionPage::setupUi()
     m_resultTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_resultTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
+    auto* title = new QLabel(QStringLiteral("检测模式"));
+    title->setStyleSheet(QStringLiteral("font-size:18px;font-weight:bold;color:#2c3e50;padding:6px 0;"));
+
+    auto* resultTitle = new QLabel(QStringLiteral("▍当前检测结果"));
+    resultTitle->setStyleSheet(QStringLiteral("font-size:14px;font-weight:bold;color:#2c6bbf;padding:6px 0;"));
+
+    root->addWidget(title);
     root->addLayout(top);
     root->addWidget(m_devicePanel, 1);
-    root->addWidget(new QLabel(QStringLiteral("当前检测结果")));
+    root->addWidget(resultTitle);
     root->addWidget(m_resultTable, 2);
 
     rebuildDevicePanel();
@@ -86,14 +93,15 @@ void DetectionPage::rebuildDevicePanel()
     const bool showNewParams = Database::instance().setting(QStringLiteral("detect_new_params"), QStringLiteral("true")) == QStringLiteral("true");
 
     // 手持车辆探测仪
-    auto* detector = new QLabel(QStringLiteral("手持车辆探测仪"));
+    auto* detector = new QLabel(QStringLiteral("● 手持车辆探测仪   在线"));
     detector->setStyleSheet(QStringLiteral(
-        "background:#e8f4fd;border:1px solid #1a6fb5;padding:12px;border-radius:4px;color:#1a6fb5;font-weight:bold;"));
+        "background:#ecf5ff;border:1px solid #b3d8ff;border-left:4px solid #409eff;"
+        "padding:14px;border-radius:6px;color:#2c6bbf;font-weight:bold;font-size:14px;"));
     layout->addWidget(detector);
 
     if (showNewParams) {
-        auto* params = new QLabel(QStringLiteral("  新参数：温度 / 湿度 / 速度 / 轴数"));
-        params->setStyleSheet(QStringLiteral("color:#555;padding-left:12px;"));
+        auto* params = new QLabel(QStringLiteral("    新参数展示：温度 / 湿度 / 速度 / 轴数"));
+        params->setStyleSheet(QStringLiteral("color:#606266;padding:6px 0 6px 18px;"));
         layout->addWidget(params);
     }
 
@@ -109,12 +117,13 @@ void DetectionPage::rebuildDevicePanel()
     if (hasSensor) {
         auto* line = new QFrame;
         line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
+        line->setStyleSheet(QStringLiteral("color:#dcdfe6;"));
         layout->addWidget(line);
 
-        auto* sensor = new QLabel(QStringLiteral("地面传感器"));
+        auto* sensor = new QLabel(QStringLiteral("● 地面传感器   在线"));
         sensor->setStyleSheet(QStringLiteral(
-            "background:#eafbe7;border:1px solid #4caf50;padding:12px;border-radius:4px;color:#4caf50;font-weight:bold;"));
+            "background:#f0f9eb;border:1px solid #c2e7b0;border-left:4px solid #67c23a;"
+            "padding:14px;border-radius:6px;color:#529b2e;font-weight:bold;font-size:14px;"));
         layout->addWidget(sensor);
     }
 
