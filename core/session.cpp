@@ -54,6 +54,9 @@ bool Session::isLicenseValid() const
 
 QString Session::licenseExpireText() const
 {
+    if (m_loggedIn && m_account.role == Role::Admin) {
+        return QStringLiteral("admin 全局维护（不受授权限制）");
+    }
     const LicenseInfo license = Database::instance().loadLicense();
     if (license.expireDate.isNull()) {
         return QStringLiteral("未授权");

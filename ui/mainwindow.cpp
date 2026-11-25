@@ -36,6 +36,9 @@ MainWindow::MainWindow(QWidget* parent)
     setupUi();
     setWindowTitle(QStringLiteral("智能车辆身份检测系统 - 上位机"));
     resize(1180, 720);
+
+    // 菜单依赖当前登录账号的权限，登录状态变化后必须重建
+    connect(&Session::instance(), &Session::loginChanged, this, &MainWindow::refreshMenu);
     refreshMenu();
 }
 
