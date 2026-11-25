@@ -1,4 +1,4 @@
-#include "licensepage.h"
+﻿#include "licensepage.h"
 #include "core/database.h"
 #include "core/crypto.h"
 #include "core/session.h"

@@ -1,4 +1,4 @@
-#include "detectionpage.h"
+﻿#include "detectionpage.h"
 #include "core/database.h"
 #include "core/session.h"
 

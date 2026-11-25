@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui/ipage.h"
 #include "ui/detectionpage.h"
 #include "ui/detectionrecordpage.h"

@@ -1,4 +1,4 @@
-#include "ui/loginwidget.h"
+﻿#include "ui/loginwidget.h"
 #include "ui/mainwindow.h"
 #include "core/database.h"
 

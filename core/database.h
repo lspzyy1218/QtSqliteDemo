@@ -1,4 +1,4 @@
-#ifndef CORE_DATABASE_H
+﻿#ifndef CORE_DATABASE_H
 #define CORE_DATABASE_H
 
 #include "models.h"

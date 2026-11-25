@@ -1,4 +1,4 @@
-#include "loginwidget.h"
+﻿#include "loginwidget.h"
 #include "core/database.h"
 #include "core/session.h"
 #include "core/crypto.h"

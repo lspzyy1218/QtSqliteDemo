@@ -1,4 +1,4 @@
-#ifndef UI_LICENSEPAGE_H
+﻿#ifndef UI_LICENSEPAGE_H
 #define UI_LICENSEPAGE_H
 
 #include "ipage.h"

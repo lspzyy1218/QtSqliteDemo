@@ -1,4 +1,4 @@
-#ifndef UI_INTERVALPAGE_H
+﻿#ifndef UI_INTERVALPAGE_H
 #define UI_INTERVALPAGE_H
 
 #include "ipage.h"

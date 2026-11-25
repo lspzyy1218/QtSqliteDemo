@@ -1,4 +1,4 @@
-#include "accountpage.h"
+﻿#include "accountpage.h"
 #include "core/database.h"
 #include "core/session.h"
 #include "core/crypto.h"

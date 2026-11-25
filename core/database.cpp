@@ -1,4 +1,4 @@
-#include "database.h"
+﻿#include "database.h"
 #include "crypto.h"
 
 #include <QSqlError>

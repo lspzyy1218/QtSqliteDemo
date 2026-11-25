@@ -1,4 +1,4 @@
-#include "intervalpage.h"
+﻿#include "intervalpage.h"
 #include "core/database.h"
 #include "core/session.h"
 

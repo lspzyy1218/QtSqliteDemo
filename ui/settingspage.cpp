@@ -1,4 +1,4 @@
-#include "settingspage.h"
+﻿#include "settingspage.h"
 #include "core/database.h"
 #include "core/session.h"
 

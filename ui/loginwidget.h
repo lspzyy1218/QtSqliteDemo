@@ -1,4 +1,4 @@
-#ifndef UI_LOGINWIDGET_H
+﻿#ifndef UI_LOGINWIDGET_H
 #define UI_LOGINWIDGET_H
 
 #include <QWidget>

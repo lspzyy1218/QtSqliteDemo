@@ -1,4 +1,4 @@
-#include "session.h"
+﻿#include "session.h"
 #include "database.h"
 
 #include <QDate>

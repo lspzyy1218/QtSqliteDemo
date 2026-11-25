@@ -1,4 +1,4 @@
-#include "crypto.h"
+﻿#include "crypto.h"
 
 #include <QCryptographicHash>
 #include <QRandomGenerator>

@@ -1,4 +1,4 @@
-#ifndef UI_DEVICEPAGE_H
+﻿#ifndef UI_DEVICEPAGE_H
 #define UI_DEVICEPAGE_H
 
 #include "ipage.h"

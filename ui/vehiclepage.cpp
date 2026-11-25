@@ -1,4 +1,4 @@
-#include "vehiclepage.h"
+﻿#include "vehiclepage.h"
 #include "core/database.h"
 #include "core/session.h"
 

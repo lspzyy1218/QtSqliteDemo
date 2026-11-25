@@ -1,4 +1,4 @@
-#include "barchart.h"
+﻿#include "barchart.h"
 
 #include <QPainter>
 #include <QFontMetrics>

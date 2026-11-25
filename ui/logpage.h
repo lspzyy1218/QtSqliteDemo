@@ -1,4 +1,4 @@
-#ifndef UI_LOGPAGE_H
+﻿#ifndef UI_LOGPAGE_H
 #define UI_LOGPAGE_H
 
 #include "ipage.h"

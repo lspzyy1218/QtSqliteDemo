@@ -1,4 +1,4 @@
-#ifndef CORE_MODELS_H
+﻿#ifndef CORE_MODELS_H
 #define CORE_MODELS_H
 
 #include <QString>

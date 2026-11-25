@@ -1,4 +1,4 @@
-#ifndef UI_BARCHART_H
+﻿#ifndef UI_BARCHART_H
 #define UI_BARCHART_H
 
 #include <QWidget>

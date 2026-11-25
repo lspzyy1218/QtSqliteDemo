@@ -1,4 +1,4 @@
-#include "detectionrecordpage.h"
+﻿#include "detectionrecordpage.h"
 #include "ui/barchart.h"
 #include "core/database.h"
 #include "core/session.h"

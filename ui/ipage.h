@@ -1,4 +1,4 @@
-#ifndef UI_IPAGE_H
+﻿#ifndef UI_IPAGE_H
 #define UI_IPAGE_H
 
 #include <QWidget>

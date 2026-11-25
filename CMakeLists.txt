@@ -55,6 +55,11 @@ qt_add_executable(QtSqliteDemo
     ui/intervalpage.cpp
 )
 
+# MSVC 必须将源文件按 UTF-8 解析，否则 QStringLiteral 中的中文会乱码
+if(MSVC)
+    target_compile_options(QtSqliteDemo PRIVATE /utf-8)
+endif()
+
 target_include_directories(QtSqliteDemo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(QtSqliteDemo PRIVATE
     Qt6::Widgets

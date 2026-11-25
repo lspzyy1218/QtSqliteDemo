@@ -1,4 +1,4 @@
-#include "logpage.h"
+﻿#include "logpage.h"
 #include "core/database.h"
 
 #include <QVBoxLayout>

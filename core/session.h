@@ -1,4 +1,4 @@
-#ifndef CORE_SESSION_H
+﻿#ifndef CORE_SESSION_H
 #define CORE_SESSION_H
 
 #include "models.h"

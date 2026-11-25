@@ -1,4 +1,4 @@
-#include "devicepage.h"
+﻿#include "devicepage.h"
 #include "core/database.h"
 #include "core/session.h"
 

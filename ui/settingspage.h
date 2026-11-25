@@ -1,4 +1,4 @@
-#ifndef UI_SETTINGSPAGE_H
+﻿#ifndef UI_SETTINGSPAGE_H
 #define UI_SETTINGSPAGE_H
 
 #include "ipage.h"

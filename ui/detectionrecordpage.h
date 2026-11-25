@@ -1,4 +1,4 @@
-#ifndef UI_DETECTIONRECORDPAGE_H
+﻿#ifndef UI_DETECTIONRECORDPAGE_H
 #define UI_DETECTIONRECORDPAGE_H
 
 #include "ipage.h"

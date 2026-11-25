@@ -1,4 +1,4 @@
-#ifndef UI_ACCOUNTPAGE_H
+﻿#ifndef UI_ACCOUNTPAGE_H
 #define UI_ACCOUNTPAGE_H
 
 #include "ipage.h"
